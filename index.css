@@ -30,6 +30,10 @@
     transform-style: preserve-3d;
 }
 
+.back {
+    transform: rotateX(180deg) rotateZ(180deg);
+}
+
 #flipper:checked ~ .card {
     transform: rotateX(180deg) rotateZ(180deg);
 }
