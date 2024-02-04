@@ -21,12 +21,12 @@
 
 .front, .back {
     position: absolute;
-    height: 236px;
-    width: 476px;
-    background-color: white;
+    height: 240px;
+    width: 480px;
+    background-color: #DEDCD5; 
     transform: translateZ(5px);
     border: 2px solid black;
-    border-radius: 3px;
+    border-radius: 10px;
     transform-style: preserve-3d;
 }
 
@@ -34,6 +34,37 @@
     transform: rotateX(180deg) rotateZ(180deg);
 }
 
+.contentPlane {
+    position: absolute;
+    height: 230px;
+    width: 480px;
+    margin-top: 4px;
+    margin-left: -2px;
+    transform: translateZ(50px) scale(.93);
+    border: 2px solid black;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAF6F9;
+    border-radius: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
 #flipper:checked ~ .card {
     transform: rotateX(180deg) rotateZ(180deg);
+}
+
+nav ul {
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 4px 4px 0px 4px;
+    text-decoration: none;
 }
