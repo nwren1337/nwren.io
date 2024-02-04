@@ -1,0 +1,39 @@
+/* general card styles and animations */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 240px;
+    width: 480px;
+    margin-top: -120px;
+    margin-left: -240px;
+    float: left;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+.front, .back {
+    position: absolute;
+    height: 236px;
+    width: 476px;
+    background-color: white;
+    transform: translateZ(5px);
+    border: 2px solid black;
+    border-radius: 3px;
+    transform-style: preserve-3d;
+}
+
+.back {
+    transform: rotateX(180deg) rotateZ(180deg);
+}
+
+#flipper:checked ~ .card {
+    transform: rotateX(180deg) rotateZ(180deg);
+}
