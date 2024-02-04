@@ -21,12 +21,12 @@
 
 .front, .back {
     position: absolute;
-    height: 236px;
-    width: 476px;
-    background-color: white;
+    height: 240px;
+    width: 480px;
+    background-color: #DEDCD5; 
     transform: translateZ(5px);
     border: 2px solid black;
-    border-radius: 3px;
+    border-radius: 10px;
     transform-style: preserve-3d;
 }
 
@@ -34,32 +34,22 @@
     transform: rotateX(180deg) rotateZ(180deg);
 }
 
-.borderPlane {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 220px;
-    width: 460px;
-    margin-top: -111px;
-    margin-left: -231px;
-    float: left;
-    border: 1px solid black;
-    border-radius: 3px;
-    transform: translateZ(30px);
-}
-
-.front .contentPlane {
-    padding-top: 5px;
-}
-
 .contentPlane {
     position: absolute;
-    height: 236px;
-    width: 476px;
-    transform: translateZ(100px) scale(.915);
+    height: 230px;
+    width: 480px;
+    margin-top: 4px;
+    margin-left: -2px;
+    transform: translateZ(50px) scale(.93);
+    border: 2px solid black;
     display: flex;
+    float: left;
     justify-content: center;
     align-items: center;
+    background-color: #FAF6F9;
+    border-radius: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
 }
 
 #flipper:checked ~ .card {
