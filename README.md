@@ -1,0 +1,1 @@
+Static for digital business card. 
