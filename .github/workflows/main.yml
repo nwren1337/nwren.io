@@ -23,4 +23,5 @@ jobs:
       run: aws s3 sync ./static/ s3://nwren.io --delete
     
     - name: Invalidate Cloudfront Cache
-      run: aws configure set preview.cloudfront true && aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+      run: aws configure set preview.cloudfront true && \
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
