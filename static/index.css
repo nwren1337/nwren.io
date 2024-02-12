@@ -52,10 +52,6 @@
     font-size: large;
 }
 
-#flipper:checked ~ .card {
-    transform: rotateX(180deg) rotateZ(180deg);
-}
-
 nav ul {
     padding: 0px;
     width: 100%;
