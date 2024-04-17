@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  webserver:
+    image: nginx:latest
+    container_name: server
+    ports:
+      - "80:80"
+    volumes:
+      - ./static:/var/www/html
+      - ./local-dev:/etc/nginx/conf.d
