@@ -1,24 +1,18 @@
 #!/bin/bash
-DEPLOY='deploy'
-ASSETS="$DEPLOY/assets"
-IMAGES="$DEPLOY/images"
+set -e
 
-rm -rf $DEPLOY
-mkdir -p "$ASSETS"
-mkdir -p "$IMAGES"
-echo "$DEPLOY folder reset"
+STATIC="static"
 
-HTML_FILENAME="index.html"
-CSS_FILENAME="index.css"
-JS_FILENAME="app.js"
-
-html-minifier --collapse-whitespace $HTML_FILENAME "$DEPLOY/$HTML_FILENAME"
-echo "HTML minified"
-
-cssnano $CSS_FILENAME "$DEPLOY/$CSS_FILENAME"
+# Minify CSS
+npx esbuild "$STATIC/index.css" --minify --outfile="$STATIC/index.css" --allow-overwrite
 echo "CSS minified"
 
-uglifyjs --compress --mangle -o "$DEPLOY/$JS_FILENAME" -- $JS_FILENAME"
-echo "Javascript minified"
+# Minify JS
+npx esbuild "$STATIC/app.js" --minify --outfile="$STATIC/app.js" --allow-overwrite
+echo "JS minified"
 
-echo "Minification complete"
+# Minify HTML (collapse whitespace)
+sed -i 's/^[[:space:]]*//;s/[[:space:]]*$//;/^$/d' "$STATIC/index.html"
+echo "HTML minified"
+
+echo "Build complete"
