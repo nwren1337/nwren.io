@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "cssnano": "^6.1.2",
+    "html-minifier": "^4.0.0",
+    "uglify-js": "^3.17.4"
+  }
+}
