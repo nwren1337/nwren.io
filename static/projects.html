@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" type="text/css" href="index.css?v=2">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -13,60 +13,86 @@
 </head>
 <body>
   <canvas id="matrix-bg"></canvas>
-  <div class="page-content">
+  <div class="page-content page-wide">
     <h1 class="page-title">projects</h1>
 
-    <div class="project-grid">
-      <div class="project-card">
-        <h3><span class="prompt">nwren@meta:~$</span> ./rlpp</h3>
-        <p>Reality Labs Product Portal is a capacity planning tool facilitating long range planning and adhoc capacity requesting. I owned and delivered the end-to-end ad-hoc request workflow and shipped a broad set of product improvements. I also led a migration of core data from graph storage to SQL, including the data model and rollout, with a focus on making the system more reliable, auditable, and easier to operate.</p>
-        <div class="tech-stack">
-          <span>React</span>
-          <span>Flow</span>
-          <span>Relay</span>
-          <span>GraphQL</span>
-          <span>Hack(PHP)</span>
+    <div class="project-columns">
+      <div class="project-group">
+        <h2 class="group-title">professional</h2>
+        <div class="project-card">
+          <h3><span class="prompt">nwren@meta:~$</span> ./rlpp</h3>
+          <p>Reality Labs Product Portal is a capacity planning tool facilitating long range planning and adhoc capacity requesting. I owned and delivered the end-to-end ad-hoc request workflow and shipped a broad set of product improvements. I also led a migration of core data from graph storage to SQL, including the data model and rollout, with a focus on making the system more reliable, auditable, and easier to operate.</p>
+          <div class="tech-stack">
+            <span>React</span>
+            <span>Flow</span>
+            <span>Relay</span>
+            <span>GraphQL</span>
+            <span>Hack(PHP)</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3><span class="prompt">nwren@meta:~$</span> ./gpu_efficiency</h3>
+          <p>On the GPU efficiency initiative, a multi-pronged effort to reduce Machine Learning Unreliability (MLU) and improve GPU utilization for large-scale LLM training jobs, I helped build end-to-end workflows for a greenfield Best Practice Enforcer system that automatically detects common training anti-patterns and drives corrective action.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Chronos (batch processing)</span>
+            <span>Presto</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3><span class="prompt">nwren@datto:~$</span> ./qapi</h3>
+          <p>QAPI is an ephemeral compute orchestration platform enabling engineers to spin up on demand test environments on KVM virtualizations and aws k8s pods. I contributed the VM recreation flow as well as many administration features. I led the project through an infrastructure hardening effort increasing the uptime from 90% to 99% uptime.</p>
+          <div class="tech-stack">
+            <span>Django REST Framework</span>
+            <span>TypeScript React</span>
+            <span>Kubernetes</span>
+            <span>QEMU/KVM</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3><span class="prompt">nwren@datto:~$</span> ./kglue</h3>
+          <p>kGlue is a microservice written in Go that facilitates the deployment of development applications in kubernetes clusters. I led a refactor of this microservice to make it environment agnostic and decouple it from AWS enabling a migration to on-prem k8s clusters to save money and improve start up times.</p>
+          <div class="tech-stack">
+            <span>Go</span>
+            <span>Helm</span>
+            <span>Kubernetes</span>
+          </div>
         </div>
       </div>
 
-      <div class="project-card">
-        <h3><span class="prompt">nwren@meta:~$</span> ./gpu_efficiency</h3>
-        <p>On the GPU efficiency initiative, a multi-pronged effort to reduce Machine Learning Unreliability (MLU) and improve GPU utilization for large-scale LLM training jobs, I helped build end-to-end workflows for a greenfield Best Practice Enforcer system that automatically detects common training anti-patterns and drives corrective action.</p>
-        <div class="tech-stack">
-          <span>Python</span>
-          <span>Chronos (batch processing)</span>
-          <span>Presto</span>
+      <div class="project-group">
+        <h2 class="group-title">personal</h2>
+        <div class="project-card">
+          <h3><span class="prompt">nwren@dev:~$</span> ./nwren.io</h3>
+          <p>This portfolio website started as a digital business card but has grown to showcase more of my work. This is likely to change again in the future as I play with the style and have fun with it.</p>
+          <div class="tech-stack">
+            <span>Raw JavaScript, CSS, and HTML</span>
+            <span>AWS S3</span>
+            <span>AWS CloudFront</span>
+          </div>
         </div>
-      </div>
 
-      <div class="project-card">
-        <h3><span class="prompt">nwren@datto:~$</span> ./qapi</h3>
-        <p>QAPI is an ephemeral compute orchestration platform enabling engineers to spin up on demand test environments on KVM virtualizations and aws k8s pods. I contributed the VM recreation flow as well as many administration features. I led the project through an infrastructure hardening effort increasing the uptime from 90% to 99% uptime.</p>
-        <div class="tech-stack">
-          <span>Django REST Framework</span>
-          <span>TypeScript React</span>
-          <span>Kubernetes</span>
-          <span>QEMU/KVM</span>
+        <div class="project-card">
+          <h3><span class="prompt">nwren@dev:~$</span> ./giftlistr.io</h3>
+          <p>An app for coordinating gift giving, allowing users to make wishlists and invite friends and family to order items from it. Built as a sample of full stack engineering work. Overengineered from day one to be highly scalable and reliable.</p>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>GraphQL</span>
+            <span>React</span>
+            <span>Relay</span>
+            <span>Postgres</span>
+          </div>
         </div>
-      </div>
 
-      <div class="project-card">
-        <h3><span class="prompt">nwren@datto:~$</span> ./kglue</h3>
-        <p>kGlue is a microservice written in Go that facilitates the deployment of development applications in kubernetes clusters. I led a refactor of this microservice to make it environment agnostic and decouple it from AWS enabling a migration to on-prem k8s clusters to save money and improve start up times.</p>
-        <div class="tech-stack">
-          <span>Go</span>
-          <span>Helm</span>
-          <span>Kubernetes</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3><span class="prompt">nwren@dev:~$</span> ./nwren.io</h3>
-        <p>This portfolio website started as a digital business card but has grown to showcase more of my work. This is likely to change again in the future as I play with the style and have fun with it.</p>
-        <div class="tech-stack">
-          <span>Raw JavaScript, CSS, and HTML</span>
-          <span>AWS S3</span>
-          <span>AWS CloudFront</span>
+        <div class="project-card">
+          <h3><span class="prompt">nwren@dev:~$</span> ./sift</h3>
+          <p>A CLI utility written in Go for sifting through log files. Meant to be a similar idea to vim but written in Go and half completed.</p>
+          <div class="tech-stack">
+            <span>Go</span>
+          </div>
         </div>
       </div>
     </div>
