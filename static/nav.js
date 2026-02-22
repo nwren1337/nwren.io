@@ -5,7 +5,7 @@
     { href: 'index.html', label: 'home' },
     { href: 'about.html', label: 'about' },
     { href: 'projects.html', label: 'projects' },
-    { href: 'resume.html', label: 'resume' }
+    { href: 'blog.html', label: 'blog' }
   ];
 
   var nav = document.createElement('nav');

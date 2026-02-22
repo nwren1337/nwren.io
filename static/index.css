@@ -297,84 +297,9 @@ body {
   font-size: 14px;
 }
 
-/* ---- resume ---- */
-.resume-section {
-  margin-bottom: 2rem;
-}
-
-.resume-section h2 {
-  color: #fff;
-  font-size: 1.2rem;
-  border-bottom: 1px solid #008f11;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.resume-section h2::before {
-  content: "# ";
-  color: #00ff41;
-}
-
-.resume-entry {
-  background: rgba(10, 10, 10, 0.85);
-  border-left: 2px solid #00ff41;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.resume-entry h3 {
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.resume-entry .date {
-  color: #008f11;
-  font-size: 13px;
-  margin-bottom: 0.5rem;
-}
-
-.resume-entry p,
-.resume-entry li {
-  color: #00ff41;
+/* ---- blog ---- */
+.blog-empty p {
   font-size: 14px;
-}
-
-.resume-entry ul {
-  list-style: none;
-  padding-left: 1rem;
-}
-
-.resume-entry ul li::before {
-  content: "> ";
-  color: #008f11;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.skill-category h4 {
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 0.5rem;
-}
-
-.skill-category ul {
-  list-style: none;
-}
-
-.skill-category ul li {
-  color: #00ff41;
-  font-size: 13px;
-  padding: 2px 0;
-}
-
-.skill-category ul li::before {
-  content: "- ";
-  color: #008f11;
 }
 
 /* ---- page headings ---- */
