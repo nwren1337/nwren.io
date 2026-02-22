@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+          <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="manifest" href="images/favicon/site.webmanifest">
@@ -17,61 +18,55 @@
 
     <div class="project-grid">
       <div class="project-card">
-        <h3>project-alpha</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <h3><span class="prompt">nwren@meta:~$</span> ./rlpp</h3>
+        <p>Reality Labs Product Portal is a capacity planning tool facilitating long range planning and adhoc capacity requesting. I owned and delivered the end-to-end ad-hoc request workflow and shipped a broad set of product improvements. I also led a migration of core data from graph storage to SQL, including the data model and rollout, with a focus on making the system more reliable, auditable, and easier to operate.</p>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Flow</span>
+          <span>Relay</span>
+          <span>GraphQL</span>
+          <span>Hack(PHP)</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3><span class="prompt">nwren@meta:~$</span> ./gpu_efficiency</h3>
+        <p>On the GPU efficiency initiative, a multi-pronged effort to reduce Machine Learning Unreliability (MLU) and improve GPU utilization for large-scale LLM training jobs, I helped build end-to-end workflows for a greenfield Best Practice Enforcer system that automatically detects common training anti-patterns and drives corrective action.</p>
         <div class="tech-stack">
           <span>Python</span>
-          <span>Flask</span>
-          <span>PostgreSQL</span>
+          <span>Chronos (batch processing)</span>
+          <span>Presto</span>
         </div>
       </div>
 
       <div class="project-card">
-        <h3>neural-net-sim</h3>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <h3><span class="prompt">nwren@datto:~$</span> ./qapi</h3>
+        <p>QAPI is an ephemeral compute orchestration platform enabling engineers to spin up on demand test environments on KVM virtualizations and aws k8s pods. I contributed the VM recreation flow as well as many administration features. I led the project through an infrastructure hardening effort increasing the uptime from 90% to 99% uptime.</p>
         <div class="tech-stack">
-          <span>Rust</span>
-          <span>WebAssembly</span>
+          <span>Django REST Framework</span>
+          <span>TypeScript React</span>
+          <span>Kubernetes</span>
+          <span>QEMU/KVM</span>
         </div>
       </div>
 
       <div class="project-card">
-        <h3>cloud-deployer</h3>
-        <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit.</p>
+        <h3><span class="prompt">nwren@datto:~$</span> ./kglue</h3>
+        <p>kGlue is a microservice written in Go that facilitates the deployment of development applications in kubernetes clusters. I led a refactor of this microservice to make it environment agnostic and decouple it from AWS enabling a migration to on-prem k8s clusters to save money and improve start up times.</p>
         <div class="tech-stack">
           <span>Go</span>
-          <span>Docker</span>
-          <span>AWS</span>
+          <span>Helm</span>
+          <span>Kubernetes</span>
         </div>
       </div>
 
       <div class="project-card">
-        <h3>crypto-tracker</h3>
-        <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
+        <h3><span class="prompt">nwren@dev:~$</span> ./nwren.io</h3>
+        <p>This portfolio website started as a digital business card but has grown to showcase more of my work. This is likely to change again in the future as I play with the style and have fun with it.</p>
         <div class="tech-stack">
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>Node.js</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>kernel-module-x</h3>
-        <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.</p>
-        <div class="tech-stack">
-          <span>C</span>
-          <span>Linux</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>nwren.io</h3>
-        <p>Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi. Pellentesque fermentum dolor. This very site you're looking at.</p>
-        <div class="tech-stack">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>AWS</span>
+          <span>Raw JavaScript, CSS, and HTML</span>
+          <span>AWS S3</span>
+          <span>AWS CloudFront</span>
         </div>
       </div>
     </div>
