@@ -1,48 +1,38 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="manifest" href="images/favicon/site.webmanifest">
   <title>nwren.io</title>
 </head>
 <body>
-    <div class="container">
-        <div id="card" class="card">
-            <div class="front">
-                <div class="contentPlane">
-                    <div class="content"><h1>Nate Wren</h1></div>
-                </div>
-            </div>
-            <div class="back">
-                <div class="contentPlane">
-                    <div class="content">
-                        <p>I write code.</p>
-                        <nav>
-                            <ul>
-                                <li><a href="https://www.linkedin.com/in/nathan-wren" target="_blank" title="linkedin"><img title="linkedin" src="images/iconmonstr-linkedin-4.svg"></a></li>
-                                <li><a href="https://github.com/nwren1337" target="_blank" title="github"><img title="github" src="images/iconmonstr-github-1.svg"></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+  <canvas id="matrix-bg"></canvas>
+  <div class="page-content landing">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+        <span class="terminal-title">nwren@dev ~ </span>
+      </div>
+      <div class="terminal-body">
+        <h1>Nate Wren</h1>
+        <p class="tagline">$ echo "I write code."<span class="blink">_</span></p>
+        <div class="cta-links">
+          <a href="about.html">> about</a>
+          <a href="projects.html">> projects</a>
+          <a href="blog.html">> blog</a>
         </div>
+      </div>
     </div>
-    <div id="particles-js"></div>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="app.js"></script>
-    <script>
-        var cardElem = document.getElementById('card')
-        cardElem.addEventListener('click', (e) => {
-            const currTransform = cardElem.style.transform
-            if(currTransform === "") {
-                cardElem.style.transform = "rotateX(180deg) rotateZ(180deg)"
-            } else {
-                cardElem.style.transform = ""
-            }
-        })
-    </script>
-
+  </div>
+  <script src="matrix.js"></script>
+  <script src="nav.js"></script>
 </body>
+</html>
