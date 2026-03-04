@@ -203,9 +203,9 @@ body {
   box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
 }
 
-.panel h2 {
+.panel h3 {
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
 }
@@ -392,5 +392,9 @@ a:hover {
 
   .about-grid .panel:first-child {
     grid-column: auto;
+  }
+
+  .panel h3 {
+    font-size: 1.1rem;
   }
 }
