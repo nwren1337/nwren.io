@@ -8,7 +8,7 @@
 body {
   background-color: #0a0a0a;
   color: #00ff41;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "IBM Plex Mono", "Courier New", Courier, monospace;
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
@@ -37,6 +37,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 0;
+  opacity: 0.35;
 }
 
 /* ---- navigation ---- */
@@ -194,7 +195,7 @@ body {
 
 /* ---- panels ---- */
 .panel {
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(10, 10, 10, 0.93);
   border: 1px solid #008f11;
   border-radius: 4px;
   padding: 2rem;
@@ -209,18 +210,30 @@ body {
   text-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
 }
 
-.panel h2::before {
-  content: "$ ";
-  color: #00ff41;
-}
 
 .panel p {
   color: #00ff41;
   margin-bottom: 1rem;
+  font-size: 14px;
 }
 
 .panel p:last-child {
   margin-bottom: 0;
+}
+
+/* ---- about grid ---- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.about-grid .panel {
+  margin-bottom: 0;
+}
+
+.about-grid .panel:first-child {
+  grid-column: 1 / -1;
 }
 
 /* ---- project layout ---- */
@@ -237,7 +250,7 @@ body {
 .project-group {
   flex: 1;
   min-width: 0;
-  background: rgba(10, 10, 10, 0.9);
+  background: rgba(10, 10, 10, 0.95);
   border: 1px solid #008f11;
   border-radius: 8px;
   padding: 1.5rem;
@@ -272,7 +285,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.project-card h3 .prompt {
+.prompt {
   color: #008f11;
   font-weight: normal;
 }
@@ -371,5 +384,13 @@ a:hover {
 
   .page-content {
     padding: 4.5rem 1rem 1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid .panel:first-child {
+    grid-column: auto;
   }
 }

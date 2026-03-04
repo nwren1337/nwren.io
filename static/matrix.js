@@ -46,17 +46,21 @@ var matrix = (function() {
 
   var interval = setInterval(draw, 40);
 
+  var resizeTimer;
   window.addEventListener('resize', function() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    var newColumns = Math.floor(canvas.width / fontSize);
-    if (newColumns > columns) {
-      for (var i = columns; i < newColumns; i++) {
-        drops[i] = Math.floor(Math.random() * -canvas.height / fontSize);
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      var newColumns = Math.floor(canvas.width / fontSize);
+      if (newColumns > columns) {
+        for (var i = columns; i < newColumns; i++) {
+          drops[i] = Math.floor(Math.random() * -canvas.height / fontSize);
+        }
       }
-    }
-    columns = newColumns;
-    drops.length = columns;
+      columns = newColumns;
+      drops.length = columns;
+    }, 150);
   });
 
   return { interval: interval };
